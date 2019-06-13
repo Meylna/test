@@ -1,0 +1,68 @@
+- config:
+    name: Test create_campaign
+    variables:
+      Email: zhushunsheng@ingtube.com
+      Password: 25d55ad283aa400af464c76d713c07ad
+
+      sp_express_opertor_id: "1129214027591843840"   #商户发货 测试号
+      sp_express_opertor_production_id_1: "1129218055818182656" # 有价格，可发布活动
+      sp_express_opertor_production_id_2: "1129214027591843840" #有价格，可发布活动
+      sp_express_opertor_production_id_3: "1131183683068231680" #未填写价格，不可发布活动
+      sp_express_opertor_production_id_4: "1138350389855256576" #已下架的商品
+
+      plat_express_operator_id: "3" #平台发货测试号，小树测试
+      plat_express_operator_production_id_1: "1127816743448739840"  # 有价格，可发布活动
+      plat_express_operator_production_id_2: "1138326675608571904" # 有价格，可发布活动
+
+      lack_monny_operator_id: "905715758942650368" #倪伟测试号，映币不足
+      lack_monny_operator_production_id_1: "970970601575415808" # 有价格，可发布活动
+      lack_monny_operator_production_id_2: "1138327615916998656" # 有价格，可发布活动
+
+- test:  #联盟后台登录
+    name: sporsor login
+    api: api/sp_login.yaml
+    variables:
+      email: $Email
+      password: $Password
+    extract:
+      - sp_user_id: content.data.userId
+      - sp_sid: content.data.ticket
+    validate:
+        - eq: ["status_code", 200]
+        - eq: [content.errorCode,0]
+        - eq: [content.data.email,$email]
+
+
+- test:  #登录成功
+    name: login success
+    api: api/ad_login.yaml
+    variables:
+      email: $Email
+      password: $Password
+    extract:
+      - ad_user_id: content.data.userId
+      - ad_sid: content.data.ticket
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,0]
+      - eq: [content.data.email,$email]
+
+- test: # 创建无悬赏的试用活动
+    name: 无悬赏的试用活动
+    api: api/create_campaign.yaml
+    variables:
+       operator_id: $sp_express_opertor_id
+       sid: $sp_sid
+       user_id: $sp_user_id
+       productionId: $sp_express_opertor_production_id_1
+       type: 0
+       startTime: "2019-06-11"
+       endTime: "2019-06-16"
+       sub_type: 0
+    validate:
+    - eq: ["status_code", 200]
+    - eq: [content.errorCode,0]
+
+
+
+

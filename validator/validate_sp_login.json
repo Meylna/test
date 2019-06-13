@@ -1,0 +1,116 @@
+ {
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "errorCode",
+    "errorDescription",
+    "command",
+    "data"
+  ],
+  "properties": {
+    "errorCode": {
+      "$id": "#/properties/errorCode",
+      "type": "integer",
+      "title": "The Errorcode Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "errorDescription": {
+      "$id": "#/properties/errorDescription",
+      "type": "string",
+      "title": "The Errordescription Schema",
+      "default": "",
+      "examples": [
+        ""
+      ],
+      "pattern": "^(.*)$"
+    },
+    "command": {
+      "$id": "#/properties/command",
+      "type": "integer",
+      "title": "The Command Schema",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "data": {
+      "$id": "#/properties/data",
+      "type": "object",
+      "title": "The Data Schema",
+      "required": [
+        "userId",
+        "identity",
+        "email",
+        "ticket",
+        "token",
+        "admin_role"
+      ],
+      "properties": {
+        "userId": {
+          "$id": "#/properties/data/properties/userId",
+          "type": "string",
+          "title": "The Userid Schema",
+          "default": "",
+          "examples": [
+            "14"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "identity": {
+          "$id": "#/properties/data/properties/identity",
+          "type": "integer",
+          "title": "The Identity Schema",
+          "default": 0,
+          "examples": [
+            1
+          ]
+        },
+        "email": {
+          "$id": "#/properties/data/properties/email",
+          "type": "string",
+          "title": "The Email Schema",
+          "default": "",
+          "examples": [
+            "zhushunsheng@ingtube.com"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "ticket": {
+          "$id": "#/properties/data/properties/ticket",
+          "type": "string",
+          "title": "The Ticket Schema",
+          "default": "",
+          "examples": [
+            "1138403033449762816"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "token": {
+          "$id": "#/properties/data/properties/token",
+          "type": "string",
+          "title": "The Token Schema",
+          "default": "",
+          "examples": [
+            "MTEzODQwMzAzMzQ0NTU2ODUxMl8xNA=="
+          ],
+          "pattern": "^(.*)$"
+        },
+        "admin_role": {
+          "$id": "#/properties/data/properties/admin_role",
+          "type": "integer",
+          "title": "The Admin_role Schema",
+          "default": 0,
+          "examples": [
+            17
+          ]
+        }
+      }
+    }
+  }
+}

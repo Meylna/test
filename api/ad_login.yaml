@@ -1,0 +1,20 @@
+name: admin login
+base_url: ${get_base_url(4)}
+variables:
+  email: zhushunsheng@ingtube.com
+  password: 25d55ad283aa400af464c76d713c07ad
+request:
+  url: /v1/passport/login
+  method: POST
+  headers: ${get_headers(4)}
+  json:
+    source: "web"
+    sid: "0"
+    userId: "0"
+    data:
+      email: $email
+      password: $password
+validate:
+  - eq: [status_code,200]
+  - eq: [content.errorCode, 0]
+

@@ -1,0 +1,79 @@
+- config:
+    name: Test ad_login
+    variables:
+      Email: zhushunsheng@ingtube.com
+      Password: 25d55ad283aa400af464c76d713c07ad
+
+- test:  #登录成功
+    name: login success
+    api: api/ad_login.yaml
+    variables:
+      email: $Email
+      password: $Password
+    validate:
+        - eq: ["status_code", 200]
+        - eq: [content.errorCode,0]
+        - eq: [content.data.email,$email]
+
+- test: #密码错误
+    name: error password
+    api: api/ad_login.yaml
+    variables:
+        email: $Email
+        password: 25d55ad283aa400af464c76d713c07
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,2001]
+      - eq: [content.errorDescription,密码错误]
+
+
+- test: #账号不存在
+    name: error email
+    api: api/ad_login.yaml
+    variables:
+        email: zhushunshengsheng@ingtube.com
+        password: $Password
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,2003]
+      - eq: [content.errorDescription,账号不存在]
+
+
+- test: #账号为空
+    name:  email none
+    api: api/ad_login.yaml
+    variables:
+        email:
+        password: $Password
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,2001]
+      - eq: [content.errorDescription,密码错误]
+
+
+- test: #密码为空
+    name:  password none
+    api: api/ad_login.yaml
+    variables:
+        email: $Email
+        password:
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,2001]
+      - eq: [content.errorDescription,密码错误]
+
+
+- test: #账号和密码都为空
+    name:  email and password none
+    api: api/ad_login.yaml
+    variables:
+        email:
+        password:
+    validate:
+      - eq: ["status_code", 200]
+      - eq: [content.errorCode,2001]
+      - eq: [content.errorDescription,密码错误]
+
+
+
+

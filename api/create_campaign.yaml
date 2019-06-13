@@ -1,0 +1,164 @@
+name: create campaign
+base_url:  ${get_base_url(2)}
+variables:
+  operator_id: "3"
+  operator_type: 1
+  sid: "1138258970113216513"
+  source: web
+  user_id: "14"
+  productionId:
+  type: 0
+  title: 自动化测试
+  stock: 9
+  campaign_specs:
+       - name: xxxs
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: xxs
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: xs
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: s
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: m
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: L
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: XL
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: XXL
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+
+       - name: XXXL
+         image_link: ""
+         production_price: 1000
+         production_num: 1
+  startTime: "2019-06-11"
+  endTime: "2019-06-16"
+  review_guide: []
+  is_offer: 1
+  is_address_limit: 0
+  address_limit:
+  area_type: 1
+  area: []
+  welfare_status: false
+  welfare_number: 1
+  order: 0
+  order_date: 0
+  addressList: []
+  invited_cp_user_info: []
+  sub_type: 0
+  reward_type: 0
+  reward_form_is_unique: 1
+  reward_form_form_status: 0
+  reward_form_form: 0
+  reward_form_channel_status: 0
+  reward_form_channel: 0
+  reward_form_channels: []
+  reward_form_total_bounty: 0
+  reward_form_bounty: 0
+  reward_form_quotas: 0
+  reward_form_extension_status: 0
+  reward_form_extension_channel_status: 0
+  reward_form_extension_channel: []
+  reward_form_extension_preferential_status: 0
+  reward_form_extension_preferential: ""
+  reward_form_publish_time_status: 0
+  reward_form_publish_start_time: ""
+  reward_form_publish_end_time: ""
+  reward_form_keywords_status: 0
+  reward_form_keywords: []
+  reward_form_word_count_status: 0
+  reward_form_word_count: 0
+  reward_form_picture_count_status: 0
+  reward_form_picture_count: 0
+  reward_rank_is_unique: 1
+  reward_rank_total_bounty: 0
+  reward_rank_bounty: {}
+  reward_rank_quotas: 0
+request:
+  url: /v1/campaign/create
+  method: POST
+  headers:  ${get_headers(2)}
+  json:
+    operator_id: $operator_id
+    operator_type: $operator_type
+    sid: $sid
+    source: $source
+    user_id: $user_id
+    data:
+        productionId: $productionId
+        type: $type
+        title: $title
+        stock: $stock
+        campaign_specs: $campaign_specs
+        startTime: $startTime
+        endTime: $endTime
+        review_guide: $review_guide
+        is_offer: $is_offer
+        is_address_limit: $is_address_limit
+        address_limit: $address_limit
+        welfare_status: $welfare_status
+        welfare_number: $welfare_number
+        order: $order
+        order_date: $order_date
+        addressList: $addressList
+        invited_cp_user_info: $invited_cp_user_info
+        sub_type: $sub_type
+        reward:
+          type: $reward_type
+          form:
+            is_unique: $reward_form_is_unique
+            form_status: $reward_form_form_status
+            form: $reward_form_form
+            channel_status: $reward_form_channel_status
+            channel: $reward_form_channel
+            channels: $reward_form_channels
+            total_bounty: $reward_form_total_bounty
+            bounty: $reward_form_bounty
+            quotas: $reward_form_quotas
+            extension_status: $reward_form_extension_status
+            extension_channel_status: $reward_form_extension_channel_status
+            extension_channel: $reward_form_extension_channel
+            extension_preferential_status: $reward_form_extension_preferential_status
+            extension_preferential: $reward_form_extension_preferential
+            publish_time_status: $reward_form_publish_time_status
+            publish_start_time: $reward_form_publish_start_time
+            publish_end_time: $reward_form_publish_end_time
+            keywords_status: $reward_form_keywords_status
+            keywords: $reward_form_keywords
+            word_count_status: $reward_form_word_count_status
+            word_count: $reward_form_word_count
+            picture_count_status: $reward_form_picture_count_status
+            picture_count: $reward_form_picture_count
+          rank:
+            is_unique: $reward_rank_is_unique
+            total_bounty: $reward_rank_total_bounty
+            bounty: $reward_rank_bounty
+            quotas: $reward_rank_quotas
+
+validate:
+  - eq: [status_code,200]
+  - eq: [content.errorCode, 0]

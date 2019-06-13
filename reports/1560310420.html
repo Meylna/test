@@ -1,0 +1,2011 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2019-06-12 11:33:40</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.198 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.0.2 </td>
+      <td>CPython 3.7.2 </td>
+      <td colspan="2">Darwin-18.2.0-x86_64-i386-64bit</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (1/0)</td>
+      <td colspan="2">6 (6/0/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>Test sp_login</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 6</td>
+      <td>SUCCESS: 6</td>
+      <td>FAILED: 0</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">login success</td>
+      <td style="text-align:center;width:6em;">65.06 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: login success</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 139
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: &#34;zhushunsheng@ingtube.com&#34;, &#34;password&#34;: &#34;25d55ad283aa400af464c76d713c07ad&#34;}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 211
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 0, 'errorDescription': '', 'command': 0, 'data': {'userId': '14', 'identity': 1, 'email': 'zhushunsheng@ingtube.com', 'ticket': '1138650549227360257', 'token': 'MTEzODY1MDU0OTIyNzM2MDI1Nl8xNA==', 'admin_role': 17}}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>0</td>
+                      <td>0</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.data.email
+                      </td>
+                      <td>eq</td>
+                      <td>zhushunsheng@ingtube.com</td>
+                      <td>zhushunsheng@ingtube.com</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>211</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>65.06</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>58.342</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">error password</td>
+      <td style="text-align:center;width:6em;">20.80 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: error password</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 137
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: &#34;zhushunsheng@ingtube.com&#34;, &#34;password&#34;: &#34;25d55ad283aa400af464c76d713c07&#34;}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 77
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 2001, 'errorDescription': '密码错误', 'command': 0, 'data': None}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>2001</td>
+                      <td>2001</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorDescription
+                      </td>
+                      <td>eq</td>
+                      <td>密码错误</td>
+                      <td>密码错误</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>77</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>20.8</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>19.471</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_3">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">error email</td>
+      <td style="text-align:center;width:6em;">18.29 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_3_1">log-1</a>
+        <div id="popup_log_1_3_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_3_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: error email</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 144
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: &#34;zhushunshengsheng@ingtube.com&#34;, &#34;password&#34;: &#34;25d55ad283aa400af464c76d713c07ad&#34;}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 80
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 2003, 'errorDescription': '账号不存在', 'command': 0, 'data': None}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>2003</td>
+                      <td>2003</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorDescription
+                      </td>
+                      <td>eq</td>
+                      <td>账号不存在</td>
+                      <td>账号不存在</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>80</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>18.29</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>16.596</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_4">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">email none</td>
+      <td style="text-align:center;width:6em;">24.15 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_4_1">log-1</a>
+        <div id="popup_log_1_4_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_4_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: email none</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 117
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: null, &#34;password&#34;: &#34;25d55ad283aa400af464c76d713c07ad&#34;}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 77
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 2001, 'errorDescription': '密码错误', 'command': 0, 'data': None}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>2001</td>
+                      <td>2001</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorDescription
+                      </td>
+                      <td>eq</td>
+                      <td>密码错误</td>
+                      <td>密码错误</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>77</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>24.15</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>22.637</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_5">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">password none</td>
+      <td style="text-align:center;width:6em;">15.12 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_5_1">log-1</a>
+        <div id="popup_log_1_5_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_5_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: password none</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 109
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: &#34;zhushunsheng@ingtube.com&#34;, &#34;password&#34;: null}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 77
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 2001, 'errorDescription': '密码错误', 'command': 0, 'data': None}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>2001</td>
+                      <td>2001</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorDescription
+                      </td>
+                      <td>eq</td>
+                      <td>密码错误</td>
+                      <td>密码错误</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>77</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>15.12</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>13.322</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_6">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">email and password none</td>
+      <td style="text-align:center;width:6em;">24.63 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_6_1">log-1</a>
+        <div id="popup_log_1_6_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_6_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: email and password none</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.103 Safari/537.36
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: application/json, text/plain, */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Origin</strong>: http://admin.ingtube.com
+                          </div>
+                          
+                          <div>
+                            <strong>Referer</strong>: http://admin.ingtube.com/v5/test/index.html
+                          </div>
+                          
+                          <div>
+                            <strong>Host</strong>: passport-dev.collectivedynamic.com:30010
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 87
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;source&#34;: &#34;web&#34;, &#34;sid&#34;: &#34;0&#34;, &#34;userId&#34;: &#34;0&#34;, &#34;data&#34;: {&#34;email&#34;: null, &#34;password&#34;: null}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://passport-dev.collectivedynamic.com:30010/v1/passport/login
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Server</strong>: nginx/1.15.2
+                            </div>
+                            
+                            <div>
+                              <strong>Date</strong>: Wed, 12 Jun 2019 03:33:40 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain; charset=utf-8
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Length</strong>: 77
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Origin</strong>: http://admin.ingtube.com
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Credentials</strong>: true
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Headers</strong>: Authorization,Content-Type,Origin
+                            </div>
+                            
+                            <div>
+                              <strong>Access-Control-Allow-Methods</strong>: POST
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain; charset=utf-8
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                            {'errorCode': 2001, 'errorDescription': '密码错误', 'command': 0, 'data': None}
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorCode
+                      </td>
+                      <td>eq</td>
+                      <td>2001</td>
+                      <td>2001</td>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        content.errorDescription
+                      </td>
+                      <td>eq</td>
+                      <td>密码错误</td>
+                      <td>密码错误</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>77</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>24.63</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>23.133</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>
