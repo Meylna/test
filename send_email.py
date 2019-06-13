@@ -5,10 +5,10 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
-sender = 'kongxaiolin@163.com'
-receiver = 'kongdemei23@163.com'
-smtpserver = 'smtp.163.com'
-password = 'kongdemei23'
+sender = 'xxxxx@163.com'
+receiver = 'xxxxxxxx@163.com'
+smtpserver = 'xxxxxxx'
+password = 'xxxxxxxxx'
 
 
 def send_Mail(file_new,result):
